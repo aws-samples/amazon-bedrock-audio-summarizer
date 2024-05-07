@@ -88,7 +88,8 @@ This project is written in Python, and uses the AWS CLI and AWS Cloud Developmen
 ## Step 1: Clone the repo 
 
 ```
-git clone https://github.com/aws-samples/amazon-bedrock-audio-summarizer && cd amazon-bedrock-audio-summarizer
+git clone https://github.com/aws-samples/amazon-bedrock-audio-summarizer 
+cd amazon-bedrock-audio-summarizer
 ```
 
 ## Step 2: Setup virtual environment 
