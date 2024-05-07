@@ -1,0 +1,38 @@
+# Python default
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# Environments
+.venv
+venv/
+
+# CDK 
+cdk.out/
+**/cdk.out/
+.cdk.staging/
+**/target/
+**/bin/
+
+# Local
+**/.DS_Store
+*.swp
+
+# Misc
+**/tmp/
+/cdk-nag.log
+package-lock.json
+*.drawio
+
+# Test audio
+*.mp4
+*.mp3
+*.m4a
+*.wav
