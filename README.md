@@ -95,7 +95,7 @@ git clone https://github.com/aws-samples/amazon-bedrock-audio-summarizer && cd a
 
 Create a virtual env:
 ```
-python3 -m venv .venv
+python3 -m venv venv
 ``` 
 
 Activate your virtual env:
@@ -150,7 +150,7 @@ Pull in dependencies from requirements.txt:
 pip install -r requirements.txt
 ```
 
-## Step 4: Deploy `Summarizer` to your account 
+## Step 4: Deploy to your account 
 
 Use the CDK to deploy project infrastructure to your account:
 
@@ -175,7 +175,7 @@ arn:aws:cloudformation:us-east-1:568125631851:stack/SummarizerStack/fcf...
 ✨  Total time: 48.3s
 ```
 
-## Step 5: Upload audio in the AWS Console
+## Step 5a: Upload audio in the AWS Console
 
 Sign into the [AWS Console](https://console.aws.amazon.com/console/home?nc2=h_ct&src=header-signin).
 
@@ -184,6 +184,10 @@ Navigate to S3. In your account, you should see a folder that starts with `summa
 ![S3 console view](./s3.png)
 
 Drop an audio file into the `source` folder to kick-off the transcription and summarization workflow. As the process moves through the stages, you should see new files placed in the `transcription` and `processed` folders of your bucket. The entire length of the process will depend on the file size of your audio, but in tests with meetings up to 45-minutes in length results were generally available within 3-5 minutes.
+
+## 5b: Upload audio via Jupyter Notebook
+
+Alternatively, you can use the [Jupyter Notebook](./quickstart.ipynb) we've put together to upload audio to S3 and poll for the summary. 
 
 ## Step 6: Review results
 
