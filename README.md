@@ -180,7 +180,7 @@ arn:aws:cloudformation:us-east-1:568125631851:stack/SummarizerStack/fcf...
 
 Sign into the [AWS Console](https://console.aws.amazon.com/console/home?nc2=h_ct&src=header-signin).
 
-Navigate to S3. In your account, you should see a folder that starts with `summarizerstack-summarizerbucket...`. Inside of this folder there are `source`, `processed`, and `transcription` folders. 
+Navigate to S3. In your account, you should see a folder that starts with `summarizerstack-summarizerbucket...`. Inside of `summarizerstack-summarizerbucket...` create a folder named `source`. 
 
 ![S3 console view](./s3.png)
 
