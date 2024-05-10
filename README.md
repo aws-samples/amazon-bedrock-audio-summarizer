@@ -96,7 +96,7 @@ cd amazon-bedrock-audio-summarizer
 
 Create a virtual env:
 ```
-python3 -m venv venv
+python3 -m venv .venv
 ``` 
 
 Activate your virtual env:
