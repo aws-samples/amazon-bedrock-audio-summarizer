@@ -153,6 +153,12 @@ pip install -r requirements.txt
 
 ## Step 4: Deploy to your account 
 
+Bootstrap your project:
+
+```
+cdk bootstrap
+```
+
 Use the CDK to deploy project infrastructure to your account:
 
 ```
