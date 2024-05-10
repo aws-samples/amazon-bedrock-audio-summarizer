@@ -153,7 +153,7 @@ pip install -r requirements.txt
 
 ## Step 4: Deploy to your account 
 
-Bootstrap your project
+Bootstrap your project:
 
 ```
 cdk bootstrap
