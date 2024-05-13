@@ -82,8 +82,12 @@ This project is written in Python, and uses the AWS CLI and AWS Cloud Developmen
 ## Prerequisites 
 - [Python 3](https://www.python.org/downloads/) and `pip`
 - [Node](https://nodejs.org/en)
-- [An AWS Account](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html) configured with an [IAM user that has permissions](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey) to Amazon Transcribe, Amazon Bedrock, AWS Lambda, and Amazon S3.
-- [Enable access to Anthropic's Claude 3 Sonnet](https://console.aws.amazon.com/bedrock/home?#/models) via the AWS Bedrock Console.
+- [An AWS Account](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html) configured with an [IAM user that has permissions](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey) to Amazon Transcribe, Amazon Bedrock, AWS Lambda, and Amazon S3. Because this is a **sample**, we grant the following permissions to the following resources:
+  - S3: All actions ([code reference](https://github.com/aws-samples/amazon-bedrock-audio-summarizer/blob/f218fea0ecb5809c826c0b60d12caf27a486539d/summarizer/summarizer_stack.py#L30-L41))
+  - Transcribe: All actions ([code reference](https://github.com/aws-samples/amazon-bedrock-audio-summarizer/blob/f218fea0ecb5809c826c0b60d12caf27a486539d/summarizer/summarizer_stack.py#L43-L53))
+  - Bedrock: InvokeModel ([code reference](https://github.com/aws-samples/amazon-bedrock-audio-summarizer/blob/f218fea0ecb5809c826c0b60d12caf27a486539d/summarizer/summarizer_stack.py#L55-L65))
+  - Lambda: Can be invoked by S3 and EventBridge
+- Ensure Bedrock is [available in your region](https://docs.aws.amazon.com/bedrock/latest/userguide/bedrock-regions.html), and [enable access to Anthropic's Claude 3 Sonnet](https://console.aws.amazon.com/bedrock/home?#/models) via the AWS Bedrock Console.
 
 ## Step 1: Clone the repo 
 
