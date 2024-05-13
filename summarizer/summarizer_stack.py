@@ -59,7 +59,7 @@ class SummarizerStack(Stack):
             statements=[               
                 iam.PolicyStatement(
                     actions=["bedrock:InvokeModel"],
-                    resources=["arn:aws:bedrock:us-east-1::foundation-model/*"]
+                    resources=["arn:aws:bedrock:{self.region}::foundation-model/*"]
                 )
             ]
         )
