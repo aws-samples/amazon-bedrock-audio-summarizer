@@ -76,6 +76,10 @@ Key action items and follow-ups:
 - Discuss the implications of results on the title race...
 ```
 
+# Known issues 
+
+-  :bug: Audio filenames that include spaces and special characters fail to kick-off transcription and summarization jobs. 
+
 # Quickstart
 This project is written in Python, and uses the AWS CLI and AWS Cloud Development Kit (CDK) to deploy infrastructure. By deploying the architecture and running this process, you may incur charges to your AWS account.
 
