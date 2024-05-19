@@ -32,7 +32,14 @@ def lambda_handler(event, context):
     job_id_suffix = "".join(random.choices(string.ascii_lowercase + string.digits, k=12))
 
     job_name = "summarizer-" + job_id_suffix
-    media_format = key.split(".")[-1]
+    # discard the filename, as we are only interested in
+    # the extension.
+    _, extension = os.path.splitext(key)
+    if not extension:
+        # extension is a blank, which means
+        # we received a key of "sample/foo"
+        return {"statusCode": 400, "body": f"invalid bucket name {key}"}
+    media_format = extension
     job_uri = f"s3://{bucket}/{key}"
 
     try:
