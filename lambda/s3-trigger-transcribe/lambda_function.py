@@ -39,7 +39,7 @@ def lambda_handler(event, context):
         # extension is a blank, which means
         # we received a key of "sample/foo"
         return {"statusCode": 400, "body": f"invalid file name {key}"}
-    media_format = extension
+    media_format = extension[1:] # strip the leading .
     job_uri = f"s3://{bucket}/{key}"
 
     try:
